@@ -4,7 +4,6 @@ import { useState } from "react";
 function App() {
   const [count, setCount] = useState(0);
   // const [light, setLight] = useState("OFF");
-  let light = "OFF";
 
   return (
     <>
@@ -12,8 +11,7 @@ function App() {
         <h1>{light}</h1>
         <button
           onClick={() => {
-            // setLight(light === "ON" ? "OFF" : "ON");
-            light = light === "ON" ? "OFF" : "ON";
+            setLight(light === "ON" ? "OFF" : "ON");
           }}
         >
           {light === "ON" ? "끄기" : "켜기"}
